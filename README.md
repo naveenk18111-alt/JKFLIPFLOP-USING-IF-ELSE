@@ -1,16 +1,15 @@
 # JKFLIPFLOP-USING-IF-ELSE
-
-**AIM:** 
-
+# Developed By: NAVEENKUMAR V
+# Ref.No: 25016071
+## AIM:
 To implement  JK flipflop using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:**
-
+## SOFTWARE REQUIRED:
 Quartus prime
 
-**THEORY**
+## THEORY:
 
-**JK Flip-Flop**
+### JK Flip-Flop
 
 JK flip-flop is the modified version of SR flip-flop. It operates with only positive clock transitions or negative clock transitions. The circuit diagram of JK flip-flop is shown in the following figure.
 
@@ -32,17 +31,34 @@ By using three variable K-Map, we can get the simplified expression for next sta
 
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=JQ(t)′+K′Q(t)Q(t+1)=JQ(t)′+K′Q(t)
 
-**Procedure**
+## Procedure:
+1.  Start a new project in Quartus Prime and create a Verilog file for implementing the JK flip-flop.
+2.  Write the Verilog code for the JK flip-flop using behavioral modeling with if–else or logical expressions.
+3.  Compile the project to check for syntax errors and generate the RTL schematic for verification.
+4.  Create a testbench and run the RTL simulation to observe the waveform of J, K, CLK, Q, and Q̅.
+5.  Compare the simulated output with the JK flip-flop truth table to verify correct flip-flop functionality.
 
-/* write all the steps invloved */
+## PROGRAM:
+```
+module jkflipflop(J,K,clk,q,qbar);
+input J,K,clk;
+output reg q;
+output reg qbar;
+initial q=0;
+initial qbar=1;
+always @(posedge clk)
+begin
+q=((J&(~q)))|((~K)&q);
+qbar=~q;
+end
+endmodule 
+```
 
-**PROGRAM**
+## RTL LOGIC FOR FLIPFLOPS:
+<img width="1920" height="1080" alt="DE jkff ex7 1" src="https://github.com/user-attachments/assets/dc20237e-7990-4be1-8131-df7f9c2f923b" />
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+## TIMING DIGRAMS FOR FLIP FLOPS:
+<img width="1920" height="1080" alt="DE jkff ex7 2" src="https://github.com/user-attachments/assets/f53fe455-1054-4ab7-9e42-bcf8e5b552b1" />
 
-**RTL LOGIC FOR FLIPFLOPS**
-
-**TIMING DIGRAMS FOR FLIP FLOPS**
-
-**RESULTS**
+## RESULTS:
+Thus the JK flipflop is implemented and verified.
