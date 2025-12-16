@@ -40,18 +40,34 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 ## PROGRAM:
 ```
-module jkflipflop(J,K,clk,q,qbar);
-input J,K,clk;
-output reg q;
-output reg qbar;
-initial q=0;
-initial qbar=1;
-always @(posedge clk)
-begin
-q=((J&(~q)))|((~K)&q);
-qbar=~q;
+module jkflipflop(
+input clk,
+input j,
+input k,
+output reg q,
+output reg qbar
+);
+
+always @(posedge clk) begin
+if (j == 0 && k == 0) begin
+    q <= q;
+    qbar <= qbar;
+end 
+else if (j == 0 && k == 1) begin
+    q <= 0;
+    qbar <= 1;
+end 
+else if (j == 1 && k == 0) begin
+    q <= 1;
+    qbar <= 0;
+end 
+else if (j == 1 && k == 1) begin
+    q <= ~q;
+    qbar <= ~qbar;
 end
-endmodule 
+end
+
+endmodule
 ```
 
 ## RTL LOGIC FOR FLIPFLOPS:
