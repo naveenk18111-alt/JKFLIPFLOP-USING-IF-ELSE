@@ -71,10 +71,10 @@ endmodule
 ```
 
 ## RTL LOGIC FOR FLIPFLOPS:
-<img width="1920" height="1080" alt="DE jkff ex7 1" src="https://github.com/user-attachments/assets/dc20237e-7990-4be1-8131-df7f9c2f923b" />
+<img width="1920" height="1080" alt="DE  jkflipflop-5 1" src="https://github.com/user-attachments/assets/7f26cce8-7376-4fc6-b87e-7942a0d0810b" />
 
 ## TIMING DIGRAMS FOR FLIP FLOPS:
-<img width="1920" height="1080" alt="DE jkff ex7 2" src="https://github.com/user-attachments/assets/f53fe455-1054-4ab7-9e42-bcf8e5b552b1" />
+<img width="1920" height="1080" alt="DE jkflipflop-5 2" src="https://github.com/user-attachments/assets/4dbc7569-1132-4591-90b2-a7e17456f90b" />
 
 ## RESULTS:
 Thus the JK flipflop is implemented and verified.
